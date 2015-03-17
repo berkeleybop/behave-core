@@ -1,4 +1,4 @@
-* behave tests for behave-core
+* behave tests for behave_core
 
   Eat own dogfood.
 
@@ -8,7 +8,7 @@
 
 ** Ubuntu 14.04 LTS
 
-  Starting from the behave-core root directory, using Ubuntu 12.04.
+  Starting from the behave_core root directory, using Ubuntu 12.04.
 
   Setup the python environment in the right place.
 
@@ -16,9 +16,7 @@
   : cd tests
   : virtualenv `pwd`
   : source bin/activate
-  : pip install behave
-  : pip install selenium
-  : pip install jsonpath-rw
+  : pip install behave selenium jsonpath-rw
 
   Running all tests (the *.feature files) should be as simple as:
 
