@@ -1,0 +1,29 @@
+* behave tests for behave-core
+
+  Eat own dogfood.
+
+* Running tests (as a user)
+
+  Hopefully no steps are necessary since we're just testing core.
+
+** Ubuntu 14.04 LTS
+
+  Starting from the behave-core root directory, using Ubuntu 12.04.
+
+  Setup the python environment in the right place.
+
+  : sudo apt-get -u install python-virtualenv
+  : cd tests
+  : virtualenv `pwd`
+  : source bin/activate
+  : pip install behave
+  : pip install selenium
+  : pip install jsonpath-rw
+
+  Running all tests (the *.feature files) should be as simple as:
+
+  : behave
+
+  Or against the UI/server target of your choice:
+
+  : TARGET=http://localhost:8989 behave
