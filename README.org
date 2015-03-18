@@ -23,7 +23,7 @@
    A collection of steps and functions for dealing with acquiring data
    across the internet.
 
-** json
+** json_data
 
    A collection of steps and functions for dealing with the parsing of
    JSON data.
@@ -31,4 +31,8 @@
 
 * TODO
 
-  As this matures, we'd like to make it into a proper pip.
+  - Get this library to be the common base of:
+    - geneontology/amigo
+    - geneontology/go-site
+    - possibly monarch
+  - As this matures, we'd like to make it into a proper pip.
