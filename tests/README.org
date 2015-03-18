@@ -20,8 +20,4 @@
 
   Running all tests (the *.feature files) should be as simple as:
 
-  : behave
-
-  Or against the UI/server target of your choice:
-
-  : TARGET=http://localhost:8989 behave
+  : PYTHONPATH="../../" behave
