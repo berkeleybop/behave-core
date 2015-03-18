@@ -2,7 +2,8 @@
 #### Setup gross testing environment.
 ####
 
-import behave_core
+from behave_core.environment import *
+from behave import *
 
 ## Run this before anything else.
 def before_all(context):
