@@ -29,7 +29,7 @@
    JSON data.
 
 
-* TODO
+* TO DO
 
   - Get this library to be the common base of:
     - geneontology/amigo
