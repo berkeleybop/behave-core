@@ -28,8 +28,7 @@
    A collection of steps and functions for dealing with the parsing of
    JSON data.
 
-
-* TO DO
+* roadmap
 
   - Get this library to be the common base of:
     - geneontology/amigo
