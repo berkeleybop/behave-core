@@ -7,11 +7,11 @@ from behave import *
 
 ## Run this before anything else.
 def before_all(context):
+    #pass
     start_browser(context)
     define_target(context)
-    #pass
     
 ## Do this after completing everything.
 def after_all(context):
-    quit_browser(context)
     #pass
+    quit_browser(context)

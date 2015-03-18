@@ -3,11 +3,11 @@
 #### Heavily uses JSONPath.
 ####
 
-#from behave_core.json import *
-from behave import step
-
 import json
 import jsonpath_rw
+
+# from behave_core.json import *
+from behave import step
 
 ## Adds:
 ##  context.content_json
