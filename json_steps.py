@@ -3,32 +3,37 @@
 #### Heavily uses JSONPath.
 ####
 
-import behave_core
-from behave import *
+#from behave_core.json import *
+from behave import step
 
 import json
 import jsonpath_rw
 
 ## Adds:
 ##  context.content_json
-@when('the content is converted to JSON')
-def step_impl(context):
+@step('the content is converted to JSON')
+def step_convert_to_json(context):
     if not context.content :
         ## Apparently no text at all...
         assert True is False
     else:
+        print('json: ', json)
         context.content_json = json.loads(context.content)
 
-@then('the JSON should have the top-level property "{prop}"')
-def step_impl(context, prop):
+## Uses:
+##  context.content_json
+@step('the JSON should have the top-level property "{prop}"')
+def step_json_top_should(context, prop):
     if not context.content_json :
         ## Apparently no JSON at all...
         assert True is False
     else:
         assert context.content_json.get(prop)
 
-@then('the JSON should have the JSONPath "{jsonpath}"')
-def step_impl(context, jsonpath):
+## Uses:
+##  context.content_json
+@step('the JSON should have the JSONPath "{jsonpath}"')
+def step_jsonpath_should(context, jsonpath):
     if not context.content_json :
         ## Apparently no JSON at all...
         assert True is False
@@ -39,8 +44,10 @@ def step_impl(context, jsonpath):
         #print(res)
         assert res
 
-@then('the JSON should have JSONPath "{jsonpath}" equal to "{thing}" "{value}"')
-def step_impl(context, jsonpath, thing, value):
+## Uses:
+##  context.content_json
+@step('the JSON should have JSONPath "{jsonpath}" equal to "{thing}" "{value}"')
+def step_jsonpath_value_should(context, jsonpath, thing, value):
     if not context.content_json :
         ## Apparently no JSON at all...
         assert True is False
