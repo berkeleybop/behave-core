@@ -7,6 +7,8 @@
 ####  context.target (occasional default when getting page)
 ####
 
+import time
+from behave_core.page import *
 from behave import step
 
 ## The basic and critical "go to page".
@@ -18,9 +20,9 @@ def step_go_to_page(context, page):
 ## The basic and critical "go to page".
 @step('I go to URL "{page_url}"')
 def step_go_to_url(context, page_url):
-    #print(context.browser.title)
+    #print(page_url)
     context.browser.get(page_url)
-
+    
 ## Title check.
 @step('the title should be "{title}"')
 def step_title_should(context, title):

@@ -3,7 +3,7 @@
 ###
 
 from behave_core.resource import *
-from behave import *
+from behave import step
 
 ## Collector for internal path.
 @step('I collect data at path "{path}"')

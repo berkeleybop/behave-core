@@ -3,11 +3,11 @@
 #### Heavily uses JSONPath.
 ####
 
+from behave_core.json_data import *
+from behave import step
+
 import json
 import jsonpath_rw
-
-# from behave_core.json import *
-from behave import step
 
 ## Adds:
 ##  context.content_json
@@ -17,7 +17,6 @@ def step_convert_to_json(context):
         ## Apparently no text at all...
         assert True is False
     else:
-        print('json: ', json)
         context.content_json = json.loads(context.content)
 
 ## Uses:
